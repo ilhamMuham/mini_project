@@ -29,6 +29,9 @@ const Product = () => {
     const _closeModal = () => {
         setShowModal(false)
     }
+    const closeLog = () => {
+        setShowLogout(false)
+    }
 
     return (
         <div>
@@ -52,7 +55,8 @@ const Product = () => {
             {showModal && <Modal
             close={_closeModal}
             />}
-            {showLogout && <Logout/>}
+            {showLogout && <Logout
+            closeLog={closeLog}/>}
         </div>
     )
 }

@@ -3,7 +3,7 @@ import {
     ModalContent,
     ContainerLogout
 } from './logout.styled.component'
-const Logout = () => {
+const Logout = (props) => {
     const router = useRouter()
 
     const _logOut = () => {
@@ -19,7 +19,7 @@ const Logout = () => {
                 </div>
                 <div>
                     <button onClick={()=> _logOut()}>Yes</button>
-                    <button>No</button>
+                    <button onClick={props.closeLog}>No</button>
                 </div>
             </ModalContent>
         </ContainerLogout>
